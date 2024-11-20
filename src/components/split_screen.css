@@ -1,0 +1,76 @@
+.split-screen-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(135deg, #1c1c1c, #2f2f2f);
+  }
+  
+  .myth-section, .fact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .myth-section {
+    background: #2a2a2a;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .fact-section {
+    background: #1f1f1f;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .section-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .reveal-button-true, .reveal-button-false {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff6f61, #d04ed6);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.reveal-button-true:hover, .reveal-button-false:hover {
+    background: linear-gradient(135deg, #ff8c80, #e063e1);
+    transform: scale(1.05);
+}
+  
+  .fact-text {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .placeholder-text {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0.5;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

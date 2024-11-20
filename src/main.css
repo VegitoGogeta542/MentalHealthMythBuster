@@ -1,0 +1,65 @@
+/* fonts.css */
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+display:wght@900&display=swap');
+
+
+.font-sour-gummy {
+    font-family: 'Sour Gummy', sans-serif;
+}
+.font-playfair-display {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 900;
+}
+
+
+body {
+    background-color: #000000; /* Replace with your desired color */
+}
+.quadrant {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
+      
+      /* Quadrant-specific hover effects */
+      .quadrant1:hover {
+        background-color: red;
+      }
+      
+      .quadrant2:hover {
+        background-color: blue;
+      }
+      
+      .quadrant3:hover {
+        background-color: pink;
+      }
+      
+      .quadrant4:hover {
+        background-color: green;
+      }
+
+.quadrantbutton button:hover {
+        background-color: pink; /* Hover color */
+        color: black; /* Text color on hover */
+        transition: background-color 0.3s ease;
+    }
+
+.start-button {
+        padding: 40px 100px;
+        font-size: 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Hover effect for the button */
+.start-button:hover {
+        background-color: pink; /* Hover background color */
+        color: white; /* Hover text color */
+    }
+    

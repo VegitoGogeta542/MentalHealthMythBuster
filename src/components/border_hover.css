@@ -1,0 +1,94 @@
+.hover-link {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Use the inherited color */
+  }
+  
+  .hover-link:visited {
+    text-decoration: none; /* Remove underline for visited links */
+  }
+  
+  .hover-link:hover {
+    text-decoration: none; /* Ensure no underline on hover */
+  }
+.box{
+    color: white;
+    font-family: monospace;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0rem 0rem 0rem 0rem;
+    width: 650px;
+    height: 350px;
+    background-color: rgb(15, 17, 17);
+    border-radius: 85px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+}
+
+.box:hover{
+    box-shadow: 0 5px 35px 0px rgb(0,0,0,.1);
+}
+
+.box:hover::before, .box:hover::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 650px;
+    height:350px;
+    background-color: #00f2ff;
+    box-shadow: 1px 1px 10px #00f2ff;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 2s clockwise;
+}
+
+.box:hover::after{
+    background-color: #ae00ff;
+    box-shadow: 1px 1px 10px #ae00ff;   
+    animation: 2s clockwise;
+}
+
+@keyframes clockwise{
+    0%{
+        top: -5px;
+        left: 0;
+    }
+    12%{
+        top: -2px;
+        left: 2px;
+    }
+    25%{
+        top: 0;
+        left: 5px;
+    }
+    37%{
+        top: 2px;
+        left: 2px;
+    }
+    50%{
+        top: 5px;
+        left: 0;
+    }
+    62%{
+        top: 2px;
+        left: -2px;
+    }
+    75%{
+        top: 0;
+        left: 5px;
+    }
+    87%{
+        top: -2px;
+        left: -2px;
+    }
+    100%{
+        top: -5px;
+        left:0;
+    }
+
+
+
+}
