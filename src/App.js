@@ -62,7 +62,7 @@ function App() {
             <SplitScreen
               myth="Myth 5: Mental health problems are a sign of weakness"
               correctAnswer="False"
-              fact="Fact: Mental health challenges are not a sign of personal weakness; they are medical conditions."
+              fact="Fact: Mental health challenges are not a sign of personal weakness; they are medical conditions. They are more a combination of genetical, and environmental factors. Experiencing these problems is part of life as a human, so do not be ashamed."
             />
           }
         />
@@ -72,7 +72,7 @@ function App() {
             <SplitScreen
               myth="Myth 6: You can just snap out of a mental illness"
               correctAnswer="False"
-              fact="Fact: Mental illnesses often require treatment, support, and time to manage effectively."
+              fact="Fact: Mental illnesses often require treatment, support, and time to manage effectively. Mental illnesses should not be taken lightly like this ever. This mindset can affect the person that has the mental illness severely. It can cause them to feel like they are not wanted. This will worsen the condition. Always be kind for no reason."
             />
           }
         />
@@ -82,7 +82,7 @@ function App() {
             <SplitScreen
               myth="Myth 7: Only veterans have PTSD"
               correctAnswer="False"
-              fact="Fact: PTSD can affect anyone who has experienced or witnessed a traumatic event."
+              fact="Fact: PTSD can affect anyone who has experienced or witnessed a traumatic event. If you ever feel like you have experienced trauma and it is affecting you, seek professional help. Stay strong in your mind and always know you are wanted and loved in this world."
             />
           }
         />
@@ -92,7 +92,7 @@ function App() {
             <SplitScreen
               myth="Myth 8: Medication is the only solution for mental illnesses"
               correctAnswer="False"
-              fact="Fact: Many treatments, including therapy and lifestyle changes, are effective for mental health challenges."
+              fact="Fact: Many treatments, including therapy and lifestyle changes, are effective for mental health challenges. Medication is realistically only a temporary solution. Other methods are much more long-term and provide more benefits."
             />
           }
         />
