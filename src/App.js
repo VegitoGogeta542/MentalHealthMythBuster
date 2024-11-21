@@ -20,7 +20,7 @@ function App() {
             <SplitScreen
               myth="Myth 1: Mental illness is rare"
               correctAnswer="False"
-              fact="Fact: 1 in 5 people experience mental health challenges."
+              fact="Fact: 1 in 5 people experience mental health challenges.. Mental health is common.. Everyone should support those with challenges.. Never be ashamed to share if you have a mental health problem."
             />
           }
         />
@@ -30,7 +30,7 @@ function App() {
             <SplitScreen
               myth="Myth 2: Therapy is only for severe issues"
               correctAnswer="False"
-              fact="Fact: Therapy helps with everyday stress and challenges."
+              fact="Fact: Therapy helps with everyday stress and challenges.. It's not just for severe mental health issues.. It benefits everyone.. Therapy is helpful even without a mental health issue and is highly reccomended."
             />
           }
         />
@@ -41,7 +41,7 @@ function App() {
             <SplitScreen
               myth="Myth 3: People with mental illnesses can't work"
               correctAnswer="False"
-              fact="Fact: Many individuals with mental illnesses lead successful professional lives."
+              fact="Fact: Many individuals with mental illnesses lead successful professional lives.. They contribute significantly to society.. Support and understanding are key.. Do not be discouraged if you have a mental health problem.. Always chase your dreams."
             />
           }
         />
@@ -51,7 +51,7 @@ function App() {
             <SplitScreen
               myth="Myth 4: Children don't experience mental health issues"
               correctAnswer="False"
-              fact="Fact: Children can and do experience mental health challenges."
+              fact="Fact: Children can and do experience mental health challenges.. Early support is crucial.. Educating parents is vital.. Lots of mental health issues develop when you are a child, so do not be afraid or ashamed."
             />
           }
         />

@@ -1,48 +1,81 @@
 import React, { useState } from "react";
 import "./split_screen.css";
-import BackButton from "./Backbutton.js";
+import BackButton from "./Backbutton";
+import ContinueButton from "./continue_button";
 
 const SplitScreen = ({ myth, correctAnswer, fact }) => {
-  const [userAnswer, setUserAnswer] = useState(null);
+  const [showFact, setShowFact] = useState(false);
+  const [factIndex, setFactIndex] = useState(0);
+  const [userFeedback, setUserFeedback] = useState("");
 
-  const handleButtonClick = (answer) => {
-    setUserAnswer(answer === correctAnswer ? "Correct!" : "Incorrect!");
+  const factsArray = fact.split(". ").filter((sentence) => sentence.trim() !== "");
+
+  const handleTrueFalseClick = (selectedAnswer) => {
+    setShowFact(true);
+    setUserFeedback(selectedAnswer === correctAnswer ? "Correct!" : "Incorrect!");
+  };
+
+  const handleContinueClick = () => {
+    if (factIndex < factsArray.length - 1) {
+      setFactIndex(factIndex + 1);
+    } else {
+      setFactIndex(0); // Reset for replay
+    }
   };
 
   return (
     <div className="split-screen-container">
-      {/* Back Button */}
-      <BackButton />
-
-      {/* Left Section for the Myth */}
+      {/* Left Section: Myth with True/False buttons */}
       <div className="myth-section">
         <h2 className="section-heading">{myth}</h2>
-        <div style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
+        <div className="true-false-buttons">
           <button
             className="reveal-button-true"
-            onClick={() => handleButtonClick("True")}
+            onClick={() => handleTrueFalseClick("True")}
           >
             True
           </button>
           <button
             className="reveal-button-false"
-            onClick={() => handleButtonClick("False")}
+            onClick={() => handleTrueFalseClick("False")}
           >
             False
           </button>
         </div>
       </div>
 
-      {/* Right Section for the Fact */}
+      {/* Right Section: Fact, Feedback, and Buttons */}
       <div className="fact-section">
-        {userAnswer ? (
-          <p className="fact-text">{userAnswer}</p>
+        {showFact ? (
+          <>
+            <p className="user-feedback">{userFeedback}</p>
+            <p className="fact-text">{factsArray[factIndex]}</p>
+            {factIndex < factsArray.length - 1 ? (
+              <div className="button-container">
+                <ContinueButton onClick={handleContinueClick} />
+              </div>
+            ) : (
+              <div className="button-container">
+                <ContinueButton onClick={handleContinueClick} />
+                <button
+                  className="continuebutton"
+                  onClick={() => {
+                    setFactIndex(0); // Reset facts
+                    setShowFact(false); // Hide fact section
+                    setUserFeedback(""); // Reset feedback
+                  }}
+                >
+                  Replay
+                </button>
+              </div>
+            )}
+          </>
         ) : (
           <p className="placeholder-text">
-            Select True or False to check your answer!
+            Click True or False to reveal the truth!
           </p>
         )}
-        {userAnswer === "Correct!" && <p className="fact-text">{fact}</p>}
+        <BackButton />
       </div>
     </div>
   );
