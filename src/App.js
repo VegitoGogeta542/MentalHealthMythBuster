@@ -20,7 +20,7 @@ function App() {
             <SplitScreen
               myth="Myth 1: Mental illness is rare"
               correctAnswer="False"
-              fact="Fact: 1 in 5 people experience mental health challenges. Do not be ashamed to seek therapy if you think you have a mental illness. 1/5 people with mental illnesses have suicidal thoughts. If you ever even have a slight thought like this please do not be afraid to confide in someone."
+              fact="Fact: 1 in 5 people experience mental health challenges."
             />
           }
         />
@@ -30,17 +30,18 @@ function App() {
             <SplitScreen
               myth="Myth 2: Therapy is only for severe issues"
               correctAnswer="False"
-              fact="Fact: Therapy helps with everyday stress and challenges. If you or anyone you know is in distress, please seek professional therapy, it helps more than the common person believe. Therapy has a wide range of applications, which is not just for mental health issues, and is useful in many scenarios. Seeking therapy is a step toward maintaining proper well-being. Call 988 if you need any instant help."
+              fact="Fact: Therapy helps with everyday stress and challenges."
             />
           }
         />
+        {/* Existing Routes */}
         <Route
           path="/story3"
           element={
             <SplitScreen
               myth="Myth 3: People with mental illnesses can't work"
               correctAnswer="False"
-              fact="Fact: Many individuals with mental illnesses lead successful professional lives. If you have a mental illness do not be discouraged. Several just like you are very succesful due to their hardwork. Never give up on your dreams."
+              fact="Fact: Many individuals with mental illnesses lead successful professional lives."
             />
           }
         />
@@ -50,7 +51,48 @@ function App() {
             <SplitScreen
               myth="Myth 4: Children don't experience mental health issues"
               correctAnswer="False"
-              fact="Fact: Children can and do experience mental health challenges. Many mental disorders even start developing when you are a child. If you see any signs of a mental illness in you or another child, seek professional therapy. "
+              fact="Fact: Children can and do experience mental health challenges."
+            />
+          }
+        />
+        {/* New Myth Routes */}
+        <Route
+          path="/story5"
+          element={
+            <SplitScreen
+              myth="Myth 5: Mental health problems are a sign of weakness"
+              correctAnswer="False"
+              fact="Fact: Mental health challenges are not a sign of personal weakness; they are medical conditions."
+            />
+          }
+        />
+        <Route
+          path="/story6"
+          element={
+            <SplitScreen
+              myth="Myth 6: You can just snap out of a mental illness"
+              correctAnswer="False"
+              fact="Fact: Mental illnesses often require treatment, support, and time to manage effectively."
+            />
+          }
+        />
+        <Route
+          path="/story7"
+          element={
+            <SplitScreen
+              myth="Myth 7: Only veterans have PTSD"
+              correctAnswer="False"
+              fact="Fact: PTSD can affect anyone who has experienced or witnessed a traumatic event."
+            />
+          }
+        />
+        <Route
+          path="/story8"
+          element={
+            <SplitScreen
+              myth="Myth 8: Medication is the only solution for mental illnesses"
+              correctAnswer="False"
+              fact="Fact: Many treatments, including therapy and lifestyle changes, are effective for mental health challenges."
             />
           }
         />
@@ -58,6 +100,7 @@ function App() {
     </Router>
   );
 }
+
 
 function TitleScreen() {
   return (
@@ -106,37 +149,32 @@ function TitleScreen() {
 
 
 
+
 function Home() {
   return (
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "1fr 1fr", // Two columns
-        gridTemplateRows: "1fr 1fr", // Two rows
-        height: "100vh", // Full screen height
-        width: "100vw", // Full screen width
+        gridTemplateColumns: "repeat(4, 1fr)", // Four columns
+        gridTemplateRows: "repeat(2, 1fr)",   // Two rows
+        gap: "20px",                         // Spacing between quadrants
+        padding: "20px",
+        height: "100vh",                     // Full screen height
+        width: "100vw",                      // Full screen width
       }}
     >
-      {/* Quadrant 1 */}
-      <div className="App" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <HoverButton title="Myth 1" link="/story1" />
-      </div>
-
-      {/* Quadrant 2 */}
-      <div className="App" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <HoverButton title="Myth 2" link="/story2" />
-      </div>
-
-      {/* Quadrant 3 */}
-      <div className="App" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <HoverButton title="Myth 3" link="/story3" />
-      </div>
-
-      {/* Quadrant 4 */}
-      <div className="App" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <HoverButton title="Myth 4" link="/story4" />
-      </div>
+      {/* Myth 1 to Myth 8 */}
+      {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+        <div
+          key={`myth-${num}`}
+          className="App"
+          style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        >
+          <HoverButton title={`Myth ${num}`} link={`/story${num}`} />
+        </div>
+      ))}
     </div>
+    
   );
 }
 
