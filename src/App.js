@@ -12,52 +12,52 @@ function App() {
       id: 1,
       myth: "Myth 1: Mental illness is rare",
       correctAnswer: "False",
-      fact: "Fact: 1 in 5 people experience mental health challenges.. Mental health is common.. Everyone should support those with challenges.. Never be ashamed to share if you have a mental health problem.",
+      fact: "Fact: The National Institute of Mental Health ran a study and found that 22.3 percent of adult Americans suffer from mental health issues.. Mental health is common.. Many think mental health is rare because of the social stigma, and people that suffer with them do not speak up.. This causes the illusion that they are not as prevalent as they truly are.. Everyone should support those with challenges.. Never be ashamed to share if you have a mental health problem.",
     },
     {
       id: 2,
       myth: "Myth 2: Therapy is only for severe issues",
       correctAnswer: "False",
-      fact: "Fact: Therapy helps with everyday stress and challenges.. It's not just for severe mental health issues.. It benefits everyone.. Therapy is helpful even without a mental health issue and is highly recommended.",
+      fact: "Fact: Many people believe therapy is only for severe mental illnesses because it is often portrayed this way in media.. However, the American Psychological Association states that nearly 75% of people in therapy see improvement in their mental health, even for everyday stressors.. Therapy is a valuable tool for anyone, not just those with severe mental health problems.",
     },
     {
       id: 3,
       myth: "Myth 3: People with mental illnesses can't work",
       correctAnswer: "False",
-      fact: "Fact: Many individuals with mental illnesses lead successful professional lives.. They contribute significantly to society.. Support and understanding are key.. Do not be discouraged if you have a mental health problem.. Always chase your dreams.",
+      fact: "Fact: This myth exists due to the stigma that mental illness makes individuals unreliable or unfit for employment.. However, according to the World Health Organization, over 70% of people with mental illnesses hold stable jobs and make meaningful contributions to society.. With proper support, people with mental health challenges can thrive in professional settings.",
     },
     {
       id: 4,
       myth: "Myth 4: Children don't experience mental health issues",
       correctAnswer: "False",
-      fact: "Fact: Children can and do experience mental health challenges.. Early support is crucial.. Educating parents is vital. Lots of mental health issues develop when you are a child, so do not be afraid or ashamed.",
+      fact: "Fact: This misconception arises because children are often viewed as carefree and without major responsibilities.. However, data from the Centers for Disease Control and Prevention (CDC) shows that 1 in 6 children aged 2–8 have a diagnosed mental, behavioral, or developmental disorder.. Early intervention and support are critical to help children manage and overcome these challenges.",
     },
     {
       id: 5,
       myth: "Myth 5: Mental health problems are a sign of weakness",
       correctAnswer: "False",
-      fact: "Fact: Mental health challenges are not a sign of personal weakness; they are medical conditions. They are more a combination of genetic and environmental factors. Experiencing these problems is part of life as a human, so do not be ashamed.",
+      fact: "Fact: This belief stems from societal expectations of 'toughness' and the stigma against seeking help.. According to the National Alliance on Mental Illness (NAMI), mental health challenges are caused by genetic, biological, and environmental factors.. Experiencing mental health problems is a common medical condition, not a weakness, with 1 in 5 adults affected annually in the U.S.",
     },
     {
       id: 6,
       myth: "Myth 6: You can just snap out of a mental illness",
       correctAnswer: "False",
-      fact: "Fact: Mental illnesses often require treatment, support, and time to manage effectively. Mental illnesses should not be taken lightly like this ever. This mindset can affect the person that has the mental illness severely. It can cause them to feel like they are not wanted. This will worsen the condition. Always be kind for no reason.",
+      fact: "Fact: Many believe mental illnesses are temporary states of mind that can be overcome with willpower.. However, the National Institute of Mental Health emphasizes that mental illnesses are complex medical conditions requiring treatment and support.. For example, clinical depression affects 8.4% of U.S. adults and often requires a combination of therapy and medication for effective management.",
     },
     {
       id: 7,
       myth: "Myth 7: Only veterans have PTSD",
       correctAnswer: "False",
-      fact: "Fact: PTSD can affect anyone who has experienced or witnessed a traumatic event. If you ever feel like you have experienced trauma and it is affecting you, seek professional help. Stay strong in your mind and always know you are wanted and loved in this world.",
+      fact: "Fact: This myth likely exists because PTSD is commonly associated with military service.. However, according to the American Psychiatric Association, PTSD can affect anyone who has experienced or witnessed a traumatic event, including accidents, natural disasters, or violence.. About 3.5% of U.S. adults experience PTSD annually.",
     },
     {
       id: 8,
       myth: "Myth 8: Medication is the only solution for mental illnesses",
       correctAnswer: "False",
-      fact: "Fact: Many treatments, including therapy and lifestyle changes, are effective for mental health challenges. Medication is realistically only a temporary solution. Other methods are much more long-term and provide more benefits.",
+      fact: "Fact: Many people believe medication is the sole treatment for mental illnesses due to its widespread use.. However, the Mayo Clinic states that a combination of therapy, lifestyle changes, and medication is often the most effective approach.. Therapy and non-pharmaceutical interventions have shown long-term benefits for many individuals.",
     },
   ];
-
+  
   const [currentPage, setCurrentPage] = useState(1);
   const mythsPerPage = 4; // Number of myths per page
   const displayedMyths = myths.slice(
